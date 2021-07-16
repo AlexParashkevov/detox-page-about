@@ -1,0 +1,61 @@
+// Bar Mixin
+@mixin bar-mixin {
+  .barbox {
+    position: relative;
+    height: 7px;
+    margin-bottom: 20px;
+  }
+  .bar {
+    position: absolute;
+    z-index: +1;
+    width: 33.3%;
+    height: 6px;
+    background-color: $main-green;
+    transition: width 2s;
+  }
+  .bartiny {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 2px;
+    background-color: $shadow;
+  }
+  .buttons {
+    margin-bottom: 30px;
+  }
+  .buttons > a {
+    cursor: pointer;
+    font-size: 14.5px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .button1 {
+    color: $dark-grey;
+  }
+  .button2 {
+    color: $light-grey;
+  }
+  .button3 {
+    color: $light-grey;
+  }
+}
+
+// Button Buy now
+@mixin buynow {
+  cursor: pointer;
+  text-align: center;
+  border: solid 2px $main-green;
+  padding: 10px 60px;
+  border-radius: 35px;
+  background-color: $background;
+  font-size: 20px;
+  font-weight: bold;
+  color: $main-green;
+  -webkit-text-stroke: 0.3px $border;
+  &:hover {
+    border: solid 2px $main-green;
+    background-color: $main-green;
+    color: $background;
+    transition: ease-in-out 0.3s;
+  }
+}
