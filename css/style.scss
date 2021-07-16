@@ -20,6 +20,7 @@
     padding: 0px;
     font-family: "PT Sans Caption", sans-serif;
     scroll-behavior: smooth;
+    overflow-x: scroll;
     background: $background;
     display: block;
     ::-webkit-scrollbar {
@@ -41,9 +42,6 @@
   .clearfix {
     clear: both;
   }
-  html {
-    overflow-x: scroll;
-  }
   * {
     margin: 0;
     padding: 0;
@@ -55,20 +53,25 @@
   }
 
   .container {
-    width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
   //section1
   .section1 {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
   }
   span {
     font-weight: bold;
   }
   .section1-box {
-    float: left;
-    width: 500px;
-    margin-top: 170px;
+    padding: 20px;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 100px;
     .small-images > img {
       width: 32px;
       margin-right: 15px;
@@ -108,11 +111,23 @@
     font-weight: bold;
   }
   .woman {
-    position: absolute;
-    bottom: -5px;
-    right: 200px;
+    display: flex;
+    flex-basis: 50%;
+    order: 2;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .woman > img {
+    height: auto;
+    max-width: 100%;
+    margin-top: 110px;
   }
   //section2
+  .container-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .section2 {
     padding: 30px 0 40px 0;
     .section2-text {
@@ -122,11 +137,9 @@
       margin-bottom: 40px;
     }
     .section2-text2 {
-      display: inline-block;
-      padding: 0px 280px 0px 280px;
+      max-width: 700px;
       text-align: center;
       font-size: 14px;
-      margin-bottom: 50px;
     }
   }
   //section 2.5
@@ -137,12 +150,14 @@
     .carousel-box {
       background-color: $background;
       width: 2800px;
-      height: 400px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: stretch;
     }
     .carousel-box > div {
-      position: relative;
       box-sizing: border-box;
-      float: left;
       background-color: $background;
       box-shadow: 1px 2px 5px $border;
       padding: 20px;
@@ -164,10 +179,9 @@
       margin-bottom: 20px;
     }
     .txt {
-      position: absolute;
+      float: left;
     }
     .section2-btn {
-      display: inline-block;
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
@@ -180,6 +194,7 @@
       position: absolute;
       left: 0px;
       width: 80px;
+      margin-top: 10px;
       background-color: $background;
       height: 50px;
     }
@@ -187,6 +202,7 @@
       position: absolute;
       right: 0px;
       width: 80px;
+      margin-top: 10px;
       background-color: $background;
       height: 50px;
     }
@@ -195,20 +211,30 @@
   .section3 {
     padding: 50px 0 50px 0;
     background-color: $tertiarybackgr;
+    .container {
+      justify-content: space-evenly;
+    }
     .circle {
-      float: left;
+      display: flex;
+
       border-radius: 50%;
-      width: 523px;
-      height: 523px;
+
+      max-width: 100%;
+      height: fit-content;
       text-align: center;
       background-color: $background;
+      .circleimg {
+        width: inherit;
+      }
       .circleimg > img {
-        height: 100%;
+        width: 100%;
       }
     }
     .section3-box {
-      float: right;
-      width: 444px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
       .sec3-head {
         font-size: 40px;
         margin-bottom: 23px;
@@ -226,17 +252,17 @@
   //section4
   .section4 {
     padding: 50px 0 50px 0;
+    .container {
+      align-items: center;
+    }
     .man-detox {
-      float: left;
-      margin-left: 180px;
       margin-top: 50px;
-      width: 365px;
+      flex-basis: 40%;
     }
     .section4-box {
-      float: right;
-      width: 420px;
       font-size: 30px;
-      margin: 100px 100px 0px 0px;
+      flex-basis: 60%;
+      padding-right: 20px;
     }
     .bar-container-2 {
       @include bar-mixin();
@@ -292,11 +318,14 @@
     .carousel-box-2 {
       background-color: $tertiarybackgr;
       width: 1500px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: stretch;
     }
     .carousel-box-2 > div {
-      position: relative;
       box-sizing: border-box;
-      float: left;
       background-color: $background;
       box-shadow: 1px 2px 5px $border;
       padding: 20px;
@@ -315,7 +344,7 @@
       height: 85px;
     }
     .txt {
-      position: absolute;
+      display: flex;
     }
     .section5-btn {
       display: inline-block;
@@ -331,12 +360,14 @@
       position: absolute;
       left: 0px;
       width: 80px;
+      margin-top: 10px;
       background-color: $tertiarybackgr;
       height: 50px;
     }
     .barbox-right {
       position: absolute;
       right: 0px;
+      margin-top: 10px;
       width: 80px;
       background-color: $tertiarybackgr;
       height: 50px;
@@ -366,16 +397,17 @@
     .carousel-box-3 {
       background-color: $background;
       width: 2300px;
-      height: 400px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: stretch;
     }
     .carousel-box-3 > div {
-      position: relative;
       box-sizing: border-box;
-      float: left;
       background-color: $background;
       box-shadow: 1px 2px 5px $border;
       padding: 20px;
-      margin-left: 2px;
       margin-right: 16px;
       border-radius: 8px;
       width: 259px;
@@ -393,7 +425,7 @@
       margin-bottom: 20px;
     }
     .txt {
-      position: absolute;
+      display: flex;
     }
     .section6-btn {
       display: inline-block;
@@ -410,6 +442,7 @@
       position: absolute;
       left: 0px;
       width: 80px;
+      margin-top: 20px;
       background-color: $background;
       height: 50px;
     }
@@ -417,6 +450,7 @@
       position: absolute;
       right: 0px;
       width: 80px;
+      margin-top: 20px;
       background-color: $background;
       height: 50px;
     }
@@ -433,21 +467,16 @@
     border-bottom: solid 1px $border;
   }
   .boxsection7 {
-    float: left;
-    width: 605px;
+    margin-left: 10px;
     background-color: $background;
     border-radius: 24px;
     box-shadow: 0 15px 30px $shadow;
+    flex-basis: 30%;
   }
   .bagsection7 {
     margin-top: -50px;
-    float: left;
-    width: 259px;
   }
   .boxs7small {
-    float: right;
-    height: 209px;
-    width: 209px;
     margin: 50px 40px 50px 40px;
   }
   .imagessec7 {
@@ -482,9 +511,11 @@
     text-decoration: line-through;
   }
   .boxsection7-2 {
-    float: right;
-    width: 419px;
-    margin: 50px 100px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    padding: 20px;
+    justify-content: center;
   }
   .boxS7-2-heading {
     font-size: 25px;

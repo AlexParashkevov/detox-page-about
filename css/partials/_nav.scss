@@ -1,53 +1,39 @@
 //nav desktop
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 929px) {
   .nav-links {
     display: block;
   }
+  .navi-mobile {
+    display: none;
+  }
+  .nav-burger {
+    display: none;
+  }
   .nav {
-    position: absolute;
-    padding: 0px 30px 0px 30px;
-    height: 60px;
-    width: 100%;
-    top: 0px;
+    display: flex;
+    justify-content: space-between;
     background: $background;
+    height: 60px;
     border-bottom: solid 1px $border;
     box-shadow: 0 1px 3px $border;
-    margin-bottom: 0px;
-  }
-  .logo1 {
-    position: absolute;
-    margin-top: 15px;
   }
   .nav-links > .buynowDesktop {
     @include buynow;
     color: $main-green;
-  }
-  .nav {
-    z-index: 10;
-    position: absolute;
-    padding: 0px 30px 0px 30px;
-    height: 80px;
-    width: 100%;
-    top: 0px;
-    background: $background;
-    border-bottom: solid 1px $border;
-    box-shadow: 0 1px 3px $border;
-    margin-bottom: 0px;
+    margin: 0px 20px;
+    padding: 5px 40px;
   }
   .logo1 {
-    float: left;
-    margin-top: 20px;
+    padding: 13px;
   }
   .nav-links {
-    float: right;
     display: flex;
     align-items: center;
-    margin-top: 14px;
     a {
       text-decoration: none;
       font-weight: bold;
       font-size: 22px;
-      margin-right: 25px;
+      margin: 0px 20px;
 
       color: $dark;
     }
@@ -58,7 +44,7 @@
   }
 }
 //start mobile navi
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 928px) {
   .nav-links {
     display: none;
   }
@@ -79,6 +65,7 @@
   }
   //mobile navi
   .navi-mobile {
+    display: block;
     top: -100%;
     position: fixed;
     z-index: 2;
@@ -88,6 +75,7 @@
     transition: all ease-in-out 0.4s;
   }
   .nav-burger {
+    display: block;
     z-index: 2;
     position: absolute;
     width: 50px;
