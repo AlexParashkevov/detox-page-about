@@ -8,729 +8,549 @@
 // Partials
 @import "partials/nav";
 @import "partials/footer";
-
-// Responsive
-@import "responsive";
-
-@media only screen and (min-width: 601px) {
-  html,
-  body {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    font-family: "PT Sans Caption", sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: scroll;
-    background: $background;
-    display: block;
-    ::-webkit-scrollbar {
-      box-sizing: border-box;
-      height: 5px;
-      width: 1px;
-      background: $light-grey;
-    }
-    ::-webkit-scrollbar-thumb:horizontal {
-      background: $main-green;
-    }
-    ::-webkit-scrollbar-track {
-      background-color: $light-grey;
-      border: 1.7px solid $background;
-      border-radius: 1px;
-      background-clip: content-box;
-    }
-  }
-  .clearfix {
-    clear: both;
-  }
-  * {
-    margin: 0;
-    padding: 0;
+// @media only screen and (min-width: 601px) {}
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "PT Sans Caption", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  background: $background;
+  display: block;
+  ::-webkit-scrollbar {
     box-sizing: border-box;
+    height: 5px;
+    width: 1px;
+    background: $light-grey;
   }
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: $main-green;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $light-grey;
+    border: 1.7px solid $background;
+    border-radius: 1px;
+    background-clip: content-box;
+  }
+}
+.clearfix {
+  clear: both;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .clearfix {
-    clear: both;
-  }
+.clearfix {
+  clear: both;
+}
 
-  .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+//section1
+.section1 {
+  display: flex;
+  justify-content: center;
+}
+span {
+  font-weight: bold;
+}
+.section1-box {
+  margin-top: 100px;
+  flex-basis: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+  .small-images > img {
+    width: 32px;
+    margin-right: 15px;
   }
-  //section1
-  .section1 {
-    display: flex;
-    justify-content: center;
-  }
-  span {
-    font-weight: bold;
-  }
-  .section1-box {
-    padding: 20px;
-    display: flex;
-    flex-basis: 50%;
-    flex-direction: column;
-    max-width: 500px;
-    margin-top: 100px;
-    .small-images > img {
-      width: 32px;
-      margin-right: 15px;
-    }
-    .small-images {
-      margin-bottom: 20px;
-    }
-    .heading {
-      font-weight: normal;
-      font-size: 40px;
-      color: $dark-grey;
-      margin-bottom: 20px;
-    }
-    .bar-container {
-      @include bar-mixin();
-    }
-    .text > a {
-      font-size: 16px;
-      color: $dark-grey;
-    }
-    .text1 {
-      margin-bottom: 24px;
-    }
-  }
-  p {
+  .small-images {
     margin-bottom: 20px;
   }
-  h2 {
-    font-size: 40px;
-    color: #333333;
+  .heading {
     font-weight: normal;
+    font-size: 40px;
+    color: $dark-grey;
     margin-bottom: 20px;
   }
-  h3 {
-    font-size: 15px;
-    color: #333333;
-    font-weight: bold;
+  .bar-container {
+    @include bar-mixin();
   }
-  .woman {
+  .text > a {
+    font-size: 16px;
+    color: $dark-grey;
+  }
+  .text1 {
+    margin-bottom: 24px;
+  }
+}
+p {
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 40px;
+  color: #333333;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 15px;
+  color: #333333;
+  font-weight: bold;
+}
+.woman {
+  display: flex;
+  order: 2;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.woman > img {
+  height: auto;
+  max-width: 100%;
+}
+//section2
+.container-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section2 {
+  padding: 30px 0 40px 0;
+  .section2-text {
+    font-size: 40px;
+    color: $dark-grey;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section2-text2 {
+    max-width: 700px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+//section 2.5
+.section2-2 {
+  padding: 2px 0 30px 0;
+  margin-bottom: 50px;
+  overflow-x: scroll;
+  .carousel-box {
+    background-color: $background;
+    width: 2800px;
+
     display: flex;
-    flex-basis: 50%;
-    order: 2;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-  .woman > img {
-    height: auto;
-    max-width: 100%;
-    margin-top: 110px;
-  }
-  //section2
-  .container-row {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-  }
-  .section2 {
-    padding: 30px 0 40px 0;
-    .section2-text {
-      font-size: 40px;
-      color: $dark-grey;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .section2-text2 {
-      max-width: 700px;
-      text-align: center;
-      font-size: 14px;
-    }
-  }
-  //section 2.5
-  .section2-2 {
-    padding: 2px 0 30px 0;
-    margin-bottom: 50px;
-    overflow-x: scroll;
-    .carousel-box {
-      background-color: $background;
-      width: 2800px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-items: stretch;
-    }
-    .carousel-box > div {
-      box-sizing: border-box;
-      background-color: $background;
-      box-shadow: 1px 2px 5px $border;
-      padding: 20px;
-      margin-right: 16px;
-      border-radius: 8px;
-      width: 259px;
-      text-align: center;
-      border: solid 2px $background;
-    }
-    .carousel-box > div:hover {
-      border: solid 2px $main-green;
-      transition: ease-out 0.8s;
-    }
-    .carousel-box > div > img {
-      margin: 12px;
-      height: 188px;
-    }
-    .txt2 {
-      margin-bottom: 20px;
-    }
-    .txt {
-      float: left;
-    }
-    .section2-btn {
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: $btn-color;
-      color: $background;
-      padding: 15px 40px;
-      border-radius: 27px;
-    }
-    .barbox-left {
-      position: absolute;
-      left: 0px;
-      width: 80px;
-      margin-top: 10px;
-      background-color: $background;
-      height: 50px;
-    }
-    .barbox-right {
-      position: absolute;
-      right: 0px;
-      width: 80px;
-      margin-top: 10px;
-      background-color: $background;
-      height: 50px;
-    }
-  }
-  //section 3
-  .section3 {
-    padding: 50px 0 50px 0;
-    background-color: $tertiarybackgr;
-    .container {
-      justify-content: space-evenly;
-    }
-    .circle {
-      display: flex;
-
-      border-radius: 50%;
-
-      max-width: 100%;
-      height: fit-content;
-      text-align: center;
-      background-color: $background;
-      .circleimg {
-        width: inherit;
-      }
-      .circleimg > img {
-        width: 100%;
-      }
-    }
-    .section3-box {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-basis: 50%;
-      .sec3-head {
-        font-size: 40px;
-        margin-bottom: 23px;
-      }
-    }
-    .section3-box-inside {
-      font-size: 16px;
-      line-height: 23px;
-    }
-    .section3-box-inside > h3 {
-      color: $dark;
-      font-weight: bold;
-    }
-  }
-  //section4
-  .section4 {
-    padding: 50px 0 50px 0;
-    .container {
-      align-items: center;
-    }
-    .man-detox {
-      margin-top: 50px;
-      flex-basis: 40%;
-    }
-    .section4-box {
-      font-size: 30px;
-      flex-basis: 60%;
-      padding-right: 20px;
-    }
-    .bar-container-2 {
-      @include bar-mixin();
-      margin-top: 20px;
-      .barbox {
-        margin-bottom: 0px;
-      }
-      .bar {
-        width: 20%;
-      }
-    }
-    .buttons > a {
-      font-size: 15.5px;
-      margin-right: 10px;
-      font-weight: bold;
-    }
-    .button1 {
-      color: $dark-grey;
-    }
-    .button2 {
-      color: $light-grey;
-    }
-
-    .button3 {
-      color: $light-grey;
-    }
-    .button4 {
-      color: $light-grey;
-    }
-    .sec4-text {
-      font-size: 16px;
-    }
-  }
-  //section5
-  .section5 {
-    padding: 30px 0 40px 0;
-    .section5-text {
-      font-size: 40px;
-      color: $dark-grey;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-  }
-  //section 5.5
-  .section5 {
-    background-color: $tertiarybackgr;
-  }
-  .section5-2 {
-    padding: 2px 0 30px 0;
-    margin-bottom: 50px;
-    overflow-x: scroll;
-    background-color: $tertiarybackgr;
-    .carousel-box-2 {
-      background-color: $tertiarybackgr;
-      width: 1500px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-items: stretch;
-    }
-    .carousel-box-2 > div {
-      box-sizing: border-box;
-      background-color: $background;
-      box-shadow: 1px 2px 5px $border;
-      padding: 20px;
-      margin-right: 16px;
-      border-radius: 8px;
-      width: 259px;
-      text-align: center;
-      border: solid 2px $background;
-    }
-    .carousel-box-2 > div:hover {
-      border: solid 2px $main-green;
-      transition: ease-out 0.8s;
-    }
-    .txt2 {
-      font-size: 15px;
-      height: 85px;
-    }
-    .txt {
-      display: flex;
-    }
-    .section5-btn {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: $btn-color;
-      color: $background;
-      padding: 15px 40px;
-      border-radius: 27px;
-    }
-    .barbox-left {
-      position: absolute;
-      left: 0px;
-      width: 80px;
-      margin-top: 10px;
-      background-color: $tertiarybackgr;
-      height: 50px;
-    }
-    .barbox-right {
-      position: absolute;
-      right: 0px;
-      margin-top: 10px;
-      width: 80px;
-      background-color: $tertiarybackgr;
-      height: 50px;
-    }
-    .carousel-box-2 > div > img {
-      height: 157px;
-      margin: 10px;
-    }
-  }
-  //section6
-  .section6 {
-    background-color: $background;
-    padding: 30px 0 40px 0;
-    .section6-text {
-      font-size: 40px;
-      color: $dark-grey;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-  }
-  //section 6.5
-  .section6-2 {
-    background-color: $background;
-    padding: 2px 0 30px 0;
-    margin-bottom: 50px;
-    overflow-x: scroll;
-    .carousel-box-3 {
-      background-color: $background;
-      width: 2300px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-items: stretch;
-    }
-    .carousel-box-3 > div {
-      box-sizing: border-box;
-      background-color: $background;
-      box-shadow: 1px 2px 5px $border;
-      padding: 20px;
-      margin-right: 16px;
-      border-radius: 8px;
-      width: 259px;
-      text-align: center;
-      border: solid 2px $background;
-    }
-    .carousel-box-3 > div:hover {
-      border: solid 2px $main-green;
-      transition: ease-out 0.8s;
-    }
-    .txt2 {
-      font-size: 15px;
-      height: 85px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    .txt {
-      display: flex;
-    }
-    .section6-btn {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: $btn-color;
-      color: $background;
-      padding: 15px 40px;
-      border-radius: 27px;
-      margin-bottom: 0px;
-    }
-    .barbox-left {
-      position: absolute;
-      left: 0px;
-      width: 80px;
-      margin-top: 20px;
-      background-color: $background;
-      height: 50px;
-    }
-    .barbox-right {
-      position: absolute;
-      right: 0px;
-      width: 80px;
-      margin-top: 20px;
-      background-color: $background;
-      height: 50px;
-    }
-    .carousel-box-3 > div > img {
-      margin: 10px;
-      height: 120px;
-    }
-  }
-  //section7
-  .section7 {
-    padding: 50px 0 50px 0;
-    width: 100%;
-    background-color: $tertiarybackgr;
-    border-bottom: solid 1px $border;
-  }
-  .boxsection7 {
-    margin-left: 10px;
-    background-color: $background;
-    border-radius: 24px;
-    box-shadow: 0 15px 30px $shadow;
-    flex-basis: 30%;
-  }
-  .bagsection7 {
-    margin-top: -50px;
-  }
-  .boxs7small {
-    margin: 50px 40px 50px 40px;
-  }
-  .imagessec7 {
-    filter: contrast(15%);
-    margin-bottom: 20px;
-  }
-  .delivery,
-  .cash {
-    padding-left: 19px;
-  }
-  .logosec7 {
-    height: 29px;
-    width: 94px;
-    margin-bottom: 10px;
-  }
-  .sec7txt1 {
-    font-size: 16px;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  .span2 {
-    color: $shadow;
-  }
-  .sec7price1 {
-    font-size: 42px;
-    font-weight: bold;
-  }
-  .sec7price2 {
-    font-size: 19px;
-    color: $secondarybackgr;
-    text-decoration: line-through;
-  }
-  .boxsection7-2 {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 70%;
-    padding: 20px;
     justify-content: center;
+    align-items: stretch;
   }
-  .boxS7-2-heading {
-    font-size: 25px;
+  .carousel-box > div {
+    box-sizing: border-box;
+    background-color: $background;
+    box-shadow: 1px 2px 5px $border;
+    padding: 20px;
+    margin-right: 16px;
+    border-radius: 8px;
+    width: 259px;
+    text-align: center;
+    border: solid 2px $background;
   }
-  .boxS7-2-text {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-  .buynow2 {
-    @include buynow;
-    background-color: $main-green;
-    color: $background;
+  .carousel-box > div:hover {
     border: solid 2px $main-green;
-    &:hover {
-      border: solid 2px $main-green;
-      background-color: $background;
-      color: $main-green;
-    }
+    transition: ease-out 0.8s;
   }
-
-  //1920x1080
-  @media screen and (max-width: 1920px) and (min-width: 1920px) {
-    //nav
-    .nav-links a {
-      margin-right: 38px;
-      font-size: 30px;
-    }
-    .nav-links > .buynowDesktop {
-      font-size: 25px;
-    }
-    .section1-box .small-images > img {
-      width: 60px;
-    }
-    .woman > img {
-      height: 900px;
-    }
-    .woman {
-      right: 140px;
-    }
-    .section1-box {
-      width: 600px;
-    }
-    .text {
-      font-size: 25px;
-    }
-    .section1-box .bar-container .buttons > a {
-      display: inline-block;
-      font-size: 32px;
+  .carousel-box > div > img {
+    margin: 12px;
+    height: 188px;
+  }
+  .txt2 {
+    margin-bottom: 20px;
+  }
+  .txt {
+    float: left;
+  }
+  .section2-btn {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: $btn-color;
+    color: $background;
+    padding: 15px 40px;
+    border-radius: 27px;
+  }
+  .barbox-left {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    margin-top: 10px;
+    background-color: $background;
+    height: 50px;
+  }
+  .barbox-right {
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    margin-top: 10px;
+    background-color: $background;
+    height: 50px;
+  }
+}
+//section 3
+.section3 {
+  padding: 50px 0 50px 0;
+  background-color: $tertiarybackgr;
+  .container {
+    justify-content: space-evenly;
+  }
+  .circle {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $background;
+    .circleimg > img {
       width: 100%;
     }
-    .section2-text2 > p {
-      font-size: 25px;
-    }
-    h2 {
-      font-size: 70px;
-    }
-    //carousel 1
-    .section2-2 .carousel-box > div > img {
-      height: 270px;
-    }
-    .section2-2 .carousel-box > div {
-      width: 330px;
-      margin-right: 34px;
-    }
-    .section2-2 .carousel-box {
-      width: 3700px;
-    }
-    .section2-2 .txt2 {
-      font-size: 25px;
-      height: 70px;
-    }
-    .section2-2 .section2-btn {
-      font-size: 32px;
-      border-radius: 50px;
-    }
-    .section2-2 .txt {
-      font-size: 25px;
-    }
-    .section2-2 .barbox-left {
-      margin-top: 120px;
-      height: 30px;
-    }
-    .section2-2 .barbox-right {
-      margin-top: 120px;
-      height: 30px;
-    }
-    //section3
-    .section3 .section3-box {
-      width: 624px;
-    }
-    h3 {
-      font-size: 27px;
-      margin-bottom: 10px;
-    }
-    .section3 .section3-box-inside {
-      font-size: 20px;
-    }
-    //section4
-    .section4 .man-detox {
-      width: 400px;
-    }
-    .man-detox > img {
-      width: 400px;
-    }
-    .section4 .bar-container-2 .buttons > a {
-      font-size: 20px;
-    }
-    .section4 .sec4-text {
-      font-size: 30px;
-    }
-    .section4 .section4-box {
-      width: 550px;
-      margin: 100px 0px;
-    }
-    //carousel 2
-    .section5-2 .carousel-box-2 > div > img {
-      height: 270px;
-    }
-    .section5-2 .carousel-box-2 > div {
-      width: 330px;
-      margin-right: 34px;
-    }
-    .section5-2 .carousel-box-2 {
-      width: 1900px;
-    }
-    .section5-2 .txt2 {
-      font-size: 25px;
-      height: 130px;
-    }
-    .section5-2 .section5-btn {
-      font-size: 32px;
-      border-radius: 50px;
-    }
-    .section5-2 .txt {
-      font-size: 25px;
-    }
-    .section5-2 .barbox-left {
-      margin-top: 570px;
-    }
-    .section5-2 .barbox-right {
-      margin-top: 570px;
-    }
-    //carousel
-    .section6-2 .carousel-box-3 > div > img {
-      margin-top: 40px;
-
-      height: 270px;
-    }
-    .section6-2 .carousel-box-3 > div {
-      width: 330px;
-      margin-right: 34px;
-    }
-    .section6-2 .txt2 {
-      font-size: 25px;
-      height: 130px;
-    }
-    .section6-2 .section6-btn {
-      font-size: 32px;
-      border-radius: 50px;
-    }
-    .section6-2 .txt {
-      font-size: 25px;
-    }
-    .section6-2 .carousel-box-3 {
-      width: 3000px;
-    }
-    .section6-2 .barbox-left {
-      margin-top: 220px;
-    }
-    .section6-2 .barbox-right {
-      margin-top: 220px;
-    }
-    //section7
-    .boxsection7 {
-      width: 700px;
-    }
-    .boxsection7-2 {
-      margin: 50px 0px;
-    }
-    .bagsection7 > img {
-      width: 350px;
-    }
-    .boxs7small {
-      margin: 50px 110px 50px 40px;
-    }
-    .sec7txt1 {
-      font-size: 24px;
-    }
-    .sec7price2 {
-      font-size: 25px;
-    }
-    .boxS7-2-text {
-      font-size: 27px;
-    }
-    .buynow2 {
+  }
+  .section3-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    .sec3-head {
       font-size: 40px;
+      margin-bottom: 23px;
     }
-    //footer
-    .footer-text-1 {
-      font-size: 15px;
+  }
+  .section3-box-inside {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .section3-box-inside > h3 {
+    color: $dark;
+    font-weight: bold;
+  }
+}
+//section4
+.section4 {
+  padding: 50px 0 50px 0;
+  .container {
+    align-items: center;
+  }
+  .man-detox {
+    margin-top: 50px;
+  }
+  .man-detox > img {
+    max-width: 100%;
+    height: auto;
+  }
+  .section4-box {
+    padding: 20px;
+    font-size: 30px;
+    margin-top: 100px;
+    flex-basis: 80%;
+    max-width: 700px;
+  }
+  .bar-container-2 {
+    @include bar-mixin();
+    margin-top: 20px;
+    .barbox {
+      margin-bottom: 0px;
     }
-    .footer-icon {
-      width: 80px;
+    .bar {
+      width: 20%;
     }
-    .footer-button-1 {
-      font-size: 24px;
-    }
-    .footer-text-2 {
-      font-size: 20px;
-    }
-    .footer-text-3 {
-      font-size: 20px;
-    }
-    .footer-cr {
-      font-size: 20px;
-    }
+  }
+  .buttons > a {
+    font-size: 15.5px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .button1 {
+    color: $dark-grey;
+  }
+  .button2 {
+    color: $light-grey;
+  }
+
+  .button3 {
+    color: $light-grey;
+  }
+  .button4 {
+    color: $light-grey;
+  }
+  .sec4-text {
+    font-size: 16px;
+  }
+}
+//section5
+.section5 {
+  padding: 30px 0 40px 0;
+  .section5-text {
+    font-size: 40px;
+    color: $dark-grey;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+//section 5.5
+.section5 {
+  background-color: $tertiarybackgr;
+}
+.section5-2 {
+  padding: 2px 0 30px 0;
+  margin-bottom: 50px;
+  overflow-x: scroll;
+  background-color: $tertiarybackgr;
+  .carousel-box-2 {
+    background-color: $tertiarybackgr;
+    width: 1500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .carousel-box-2 > div {
+    box-sizing: border-box;
+    background-color: $background;
+    box-shadow: 1px 2px 5px $border;
+    padding: 20px;
+    margin-right: 16px;
+    border-radius: 8px;
+    width: 259px;
+    text-align: center;
+    border: solid 2px $background;
+  }
+  .carousel-box-2 > div:hover {
+    border: solid 2px $main-green;
+    transition: ease-out 0.8s;
+  }
+  .txt2 {
+    font-size: 15px;
+    height: 85px;
+  }
+  .txt {
+    display: flex;
+  }
+  .section5-btn {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: $btn-color;
+    color: $background;
+    padding: 15px 40px;
+    border-radius: 27px;
+  }
+  .barbox-left {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    margin-top: 10px;
+    background-color: $tertiarybackgr;
+    height: 50px;
+  }
+  .barbox-right {
+    position: absolute;
+    right: 0px;
+    margin-top: 10px;
+    width: 80px;
+    background-color: $tertiarybackgr;
+    height: 50px;
+  }
+  .carousel-box-2 > div > img {
+    height: 157px;
+    margin: 10px;
+  }
+}
+//section6
+.section6 {
+  background-color: $background;
+  padding: 30px 0 40px 0;
+  .section6-text {
+    font-size: 40px;
+    color: $dark-grey;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+//section 6.5
+.section6-2 {
+  background-color: $background;
+  padding: 2px 0 30px 0;
+  margin-bottom: 50px;
+  overflow-x: scroll;
+  .carousel-box-3 {
+    background-color: $background;
+    width: 2300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .carousel-box-3 > div {
+    box-sizing: border-box;
+    background-color: $background;
+    box-shadow: 1px 2px 5px $border;
+    padding: 20px;
+    margin-right: 16px;
+    border-radius: 8px;
+    width: 259px;
+    text-align: center;
+    border: solid 2px $background;
+  }
+  .carousel-box-3 > div:hover {
+    border: solid 2px $main-green;
+    transition: ease-out 0.8s;
+  }
+  .txt2 {
+    font-size: 15px;
+    height: 85px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .txt {
+    display: flex;
+  }
+  .section6-btn {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: $btn-color;
+    color: $background;
+    padding: 15px 40px;
+    border-radius: 27px;
+    margin-bottom: 0px;
+  }
+  .barbox-left {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    margin-top: 20px;
+    background-color: $background;
+    height: 50px;
+  }
+  .barbox-right {
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    margin-top: 20px;
+    background-color: $background;
+    height: 50px;
+  }
+  .carousel-box-3 > div > img {
+    margin: 10px;
+    height: 120px;
+  }
+}
+//section7
+.section7 {
+  padding: 50px 0;
+  background-color: $tertiarybackgr;
+  border-bottom: solid 1px $border;
+}
+.section7 > .container {
+  flex-wrap: wrap;
+}
+.boxsection7 {
+  margin: 10px;
+  display: flex;
+  padding: 20px;
+  background-color: $background;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px $shadow;
+}
+.bagsection7 {
+  margin-top: -50px;
+}
+.boxs7small {
+}
+.imagessec7 {
+  filter: contrast(15%);
+  margin-bottom: 20px;
+}
+.delivery,
+.cash {
+  padding-left: 19px;
+}
+.logosec7 {
+  height: 29px;
+  width: 94px;
+  margin-bottom: 10px;
+}
+.sec7txt1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.span2 {
+  color: $shadow;
+}
+.sec7price1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+.sec7price2 {
+  font-size: 19px;
+  color: $secondarybackgr;
+  text-decoration: line-through;
+}
+.boxsection7-2 {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+}
+.boxS7-2-heading {
+  font-size: 25px;
+}
+.boxS7-2-text {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.buynow2 {
+  @include buynow;
+  background-color: $main-green;
+  color: $background;
+  border: solid 2px $main-green;
+  &:hover {
+    border: solid 2px $main-green;
+    background-color: $background;
+    color: $main-green;
+  }
+}
+//mobile hidden
+@media screen and (max-width: 600px) {
+  .woman {
+    display: none;
+  }
+  .bagsection7 {
+    display: none;
+  }
+}
+// 1920x1080
+@media screen and (max-width: 1920px) and (min-width: 1920px) {
+  .container {
+    max-width: 1500px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .section1-box .bar-container .buttons > a {
+    font-size: 16.5px;
+  }
+  .woman {
+    width: 800px;
+    margin-top: 150px;
   }
 }
